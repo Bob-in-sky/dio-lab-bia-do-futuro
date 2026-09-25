@@ -3,41 +3,41 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
+> Qual problema seu agente resolve?
 
-[Sua descrição aqui]
+O agente precisa auxiliar os usuarios que desejam construir homelabs e possuem duvidas no caminho que devem seguir, e nos problemas que precisam resolver.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Este agente deve operar  para auxiliar a construcao de homelabs, atuando como instrutor para orientar os passos que o usuario deve tomar para que consiga implementar as funcionalidades desejadas em seu sistema pessoal.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Profissionais tecnologicos que tenham desejo por melhorar suas habilidades por meio de projetos praticos reais.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Seguir o nome do modelo sendo utilizado.
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+Agente tecnologico profissional e educativo, capaz de descrever passos a passos em detalhes e solucionar duvidas
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+técnico e didático para pessoas com experiencia em tecnologia
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá!"
+- Confirmação: "Entendi! Deixa eu verificar isso para você."
+- Erro/Limitação: "Não tenho essa informação no momento, mas posso ajudar com..."
 
 ---
 
@@ -47,7 +47,7 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Usuario] -->|Mensagem| B[Interface]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
@@ -59,10 +59,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit |
+| LLM | Qwen |
+| Base de Conhecimento | JSON/CSV com setup do usuario |
+| Validação | Checagem de alucinações |
 
 ---
 
@@ -70,12 +70,12 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Agente só responde com base nos dados fornecidos
+- [ ] Respostas incluem fonte da informação
+- [ ] Quando não sabe, admite e redireciona
+- [ ] Foca em educar o usuário
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+Agente não aplica operações sem a confirmação do usuario

@@ -1,0 +1,27 @@
+{
+	"desktop": {
+		"OS":  "Windows",
+		"CPU": "RYZEN R7 5700X3D",
+		"GPU": "NVIDIA 4060TI 8GB",
+		"RAM": "16GB",
+		"HDD": "1TB",
+		"SSD": "1TB",
+		"PSU": "550W"
+	},
+	"laptop": {
+		"OS": "DUAL BOOT Windows & Arch Linux",
+		"CPU": "INTEL CORE I7",
+		"GPU": "INTEL IRIS Xe",
+		"RAM": "8GB",
+		"SSD": {
+			"NVMe": "256GB",
+			"SATA": "1TB"
+		}
+	},
+	"raspberry pi": {
+		"OS": "PI OS LITE",
+		"RAM": "8GB",
+		"HDD": "500GB",
+		"SD card": "8GB"
+	}
+}

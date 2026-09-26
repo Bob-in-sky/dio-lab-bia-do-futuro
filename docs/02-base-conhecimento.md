@@ -6,13 +6,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `specs.json` | JSON | Inventário do usuário |
+| `services.json` | JSON | SServicos implementados no homelab do usuario |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+<!-- > [!TIP]
+> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio. -->
 
 ---
 
@@ -20,7 +18,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Os dados foram adaptados para contextualizar o agente com informações relevantes ao processo de homelabing
 
 ---
 
@@ -29,12 +27,12 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt, e serão armazenados para serem utilizados no contexto global do agente, que deve estar ciente de como o ambiente do usuario está catalogado no momento
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados podem ser consultados e alterados dinamicamente conforme o usuario implementa seus projetos no sistema, quando necessario o agente deve buscar informações na internet para poder tirar as duvidas do usuario quanto às tecnologias que deseja implementar
 
 ---
 
@@ -42,14 +40,31 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Mostre um exemplo de como os dados são formatados para o agente.
 
-```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+o exemplo de contecto abaixo se baseia nos dados originais da base de conhecimento, resumidos para otimizar o consumo de tokenns, porém a prioridade do agente se encontra em ter as informações disponiveis sobre o sistema que o usuario esta montando, para que o usuario possa consultar e tirar duidas sem que apresente seu sistema toda hora.
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+```
+Inventário do usuário:
+- desktop: 1
+	- cpu: R7 5700X3D
+	- gpu: 4060TI 8GB
+	- ram: 16GB
+	- ssd: 1TB
+	- hdd: 1TB
+- laptop: 1
+	- cpu: intel core i7
+	- gpu: intel iris xe
+	- ram: 8GB
+- raspberry pi 5: 1
+	- ram: 8GB
+	- hdd: 500GB
+	- sd card: 8GB
+
+servicos implementados:
+- jellyfin server
+- pi-hole
+- portainer
+- docker
+- tailscale
+- file browser
 ...
 ```

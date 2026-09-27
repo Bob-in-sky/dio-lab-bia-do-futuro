@@ -2,12 +2,10 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
 | `specs.json` | JSON | Inventário do usuário |
-| `services.json` | JSON | SServicos implementados no homelab do usuario |
+| `services.json` | JSON | Servicos implementados no homelab do usuario |
 
 <!-- > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio. -->

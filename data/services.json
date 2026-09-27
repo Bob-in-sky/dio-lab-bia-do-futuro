@@ -1,0 +1,18 @@
+{
+	"pihole": {
+		"machine": "raspberry pi",
+		"container": "docker"
+	},
+	"jellyfin": {
+		"machine": "raspberry pi",
+		"container": "docker"
+	},
+	"filebrowser": {
+		"machine": "raspberry pi",
+		"container": "docker"
+	},
+	"portainer": {
+		"machine": "raspberry pi",
+		"container": "docker"
+	}
+}
